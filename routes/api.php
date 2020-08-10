@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('balance-entry', 'api\BalanceEntryController@index');
+Route::get('balance-entry/total', 'api\BalanceEntryController@total');
+Route::get('balance-entry/{id}', 'api\BalanceEntryController@show');
+Route::post('balance-entry', 'api\BalanceEntryController@store');
+Route::put('balance-entry/{id}', 'api\BalanceEntryController@update');
+Route::delete('balance-entry/{id}', 'api\BalanceEntryController@delete');
+
+

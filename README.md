@@ -1,61 +1,57 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Finance App Trial Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This project proposal has been put together to help developers who are applying for new positions but don't have any sample code to provide during the hiring process.
 
-## About Laravel
+## Requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The trial project is split into two phases. This helps to break the project into smaller, more manageable chunks. It also allows us to provide you with project feedback along the way.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The trial project should be built using Laravel and Vue.js and should demonstrate your abilities with these frameworks. We will also be looking at how accurately you can implement high fidelity mockups.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Phase 1
 
-## Learning Laravel
+A list of the user's balance entries should be shown by default. Entries should be grouped by date. Although pagination is missing from the mockups, please add basic pagination for when more than 100 entries exist.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![](mockups/yourbalance-1-default@2x.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+A user should be able to add single balance entries. Adding a new entry should update the balance list and the total balance.
 
-## Laravel Sponsors
+![](mockups/yourbalance-2-add-item-modal@2x.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Hovering over an entry should show the edit and delete links.
 
-### Premium Partners
+![](mockups/yourbalance-3-rollover-actions@2x.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+Clicking 'Delete' should remove the entry from the list and update the total balance. Clicking 'Edit' should reveal the edit form.
 
-## Contributing
+![](mockups/yourbalance-4-edit-item@2x.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Clicking 'Update Entry' should update the balance list and update the total balance.
 
-## Code of Conduct
+### Phase 1 Delivery
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Once you've completed phase 1, you should deliver it for feedback before continuing on to phase 2.
 
-## Security Vulnerabilities
+1. Create an empty GitHub repo for your project (public or private, up to you)
+1. If the repo is private, grant @A5hleyRich @gilbitron @bradt access
+1. Create a `phase1` branch and make all your commits to that branch
+1. When it's ready for review, push the `phase1` branch to GitHub
+1. Open a pull request to merge `phase1` into the `master` branch and mention @A5hleyRich in the PR comment
+1. Reply to our email to let us know you've mentioned Ash in the PR
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Phase 2
 
-## License
+A [CSV file](data/5000-balance-entries.csv) of entries can be imported. The import should happen in the background. The 'Add Entry' and 'Import CSV' buttons should be disabled while the import is working, however, existing entries can be edited or deleted.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![](mockups/yourbalance-6-import-csv-file-selected@2x.png)
+
+Imported entries should not appear in the balance list, until the entire import has completed. When the import is running, a notice should be shown with the count of entries currently being imported.
+
+![](mockups/yourbalance-7-csv-uploading@2x.png)
+
+### Phase 2 Delivery
+
+1. Create a new `phase2` branch off of the `phase1` branch and make all your Phase 2 commits to it
+1. When it's ready for review, push the `phase2` branch to GitHub
+1. Open a pull request to merge `phase2` into the `phase1` branch and mention @A5hleyRich in the PR comment
+1. Reply to our email to let us know you've mentioned Ash in the PR

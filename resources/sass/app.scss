@@ -1,1 +1,25 @@
-//
+// Fonts
+@font-face {
+	font-family: 'SF Pro Rounded';
+	font-style: normal;
+	font-weight: 400;
+    src: url("~/font/SF-Pro-Rounded-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: 'SF Pro Rounded';
+	font-style: normal;
+	font-weight: 700;
+    src: url("~/font/SF-Pro-Rounded-Bold.otf") format("opentype");
+}
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index.scss';
+
+.img-thumb {
+    height: 30px;
+}
