@@ -65,9 +65,9 @@
 
                             </div>
                             <div class="card-footer bg-light text-right">
-                                <b-button variant="tertiary p-3 px-4 text-fade font-weight-bold mr-3"  @click="resetRec()">CANCEL</b-button>
+                                <b-button variant="tertiary p-3 px-4 text-fade font-weight-bold mr-3"  @click.prevent="resetRec()">CANCEL</b-button>
 
-                                <b-button variant="primary font-weight-bold p-3 px-4" @click="updateEntry()">UPDATE ENTRY</b-button>
+                                <b-button variant="primary font-weight-bold p-3 px-4" @click.prevent="updateEntry()">UPDATE ENTRY</b-button>
                             </div>
                         </b-form>
                     </transition>

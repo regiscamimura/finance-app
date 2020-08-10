@@ -38,5 +38,8 @@ const app = new Vue({
     el: '#app',
     store,
     axios,
+    components: {
+        App
+    },
     render: h => h(App),
 });
