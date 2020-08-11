@@ -1,0 +1,48 @@
+// Body
+$body-bg: #F5F6FA;
+
+$spacer: 0.75rem;
+
+// Typography
+$font-family-sans-serif: 'SF Pro Rounded', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.5;
+$headings-line-height: 1.5rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 850px,
+  xl: 860px
+);
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$primary: #0E5BFE;
+$secondary: #192B4E;
+$fade: #74798D;
+$light: #ffffff;
+$tertiary: #D9E1F8;
+
+$theme-colors: (
+    "fade": $fade,
+    "tertiary": $tertiary
+);
+
+$border-radius: .35rem;
+$input-btn-font-size: 0.75rem;
+$input-btn-padding-y: .45rem;
+$input-btn-border-width: 2px;
+
+$box-shadow: 0 .1rem 0.4rem rgba(0,0,0, .1);
+
