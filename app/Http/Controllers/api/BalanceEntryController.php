@@ -13,7 +13,7 @@ class BalanceEntryController extends Controller
 {
     public function index(Request $request)
     {
-        $result = BalanceEntry::all()->sortByDesc('date')->values()->all();
+        $result = BalanceEntry::orderByDesc('date')->get();
         if ($request->input('grouped_by_date')) {
             $entries = [];
             foreach ($result as $row) {
@@ -34,11 +34,23 @@ class BalanceEntryController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'label' => 'required|max:255',
+            'date' => 'required|date',
+            'amount' => 'required|numeric'
+        ]);
+
         return BalanceEntry::create($request->all());
     }
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'label' => 'required',
+            'date' => 'required|date',
+            'amount' => 'required|numeric'
+        ]);
+
         $rec = BalanceEntry::findOrFail($id);
         $rec->update($request->all());
 
